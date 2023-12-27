@@ -12,17 +12,13 @@
         }
     }
     int main(){
-        int check = 0;
         int end=-1;
-        char x = 'x';
-        char o = 'O';
         int selection1;
-        char symbols[]= "--*";
         char board[3][3] = {
             {'1' , '2' , '3'} ,
             {'4' , '5' , '6'} ,
             {'7' , '8' , '9'}
-        }; 
+        };
 
         writingShape(board);
         printf("\n");
@@ -72,4 +68,3 @@
             return 0;
         }
     }
-

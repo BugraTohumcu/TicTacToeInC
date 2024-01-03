@@ -11,6 +11,14 @@
         printf("\n");
         }
     }
+
+    int SelectionCheck(int selection1){
+        while(selection1<= 0 || selection1>9){
+            printf("Invalid selection Please select again: ");
+            scanf("%d",&selection1);
+        }
+        return selection1;
+    }
     int main(){
         int end=-1;
         int selection1;
@@ -31,9 +39,11 @@
                 printf("Where do you want to put O: ");
                 }
                 scanf("%d",&selection1);
+                selection1=SelectionCheck(selection1);
                 while(board[0][selection1-1] == 'X' ||board[0][selection1-1] == 'O'){
                     printf("This space is already choosed please choose another space: ");
                     scanf("%d", &selection1);
+                    selection1=SelectionCheck(selection1);
                     }
                 if(counter % 2 == 0 ){
                     board[0][selection1-1] ='X';
